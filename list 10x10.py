@@ -30,6 +30,23 @@ def generate_random_number_list_10x10_1(amount_of_lists):
     print(main_list)
 
 generate_random_number_list_10x10_1(10)
+'''
+def generate_random_number_list_10(len_of_elements):
+    return[print((random.randint(1,100))) for x in range (len_of_elements)]
+
+my_random_list=generate_random_number_list_10(10)
+'''
+
+'''
+def generate_random_number_list_10(len_of_elements):
+    my_list=[]
+    [my_list.append(random.randint(1,100)) for x in range (len_of_elements)]
+    return print(my_list)
+ 
+
+
+random_list=generate_random_number_list_10(10)
+'''
 
 
 

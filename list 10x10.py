@@ -48,7 +48,7 @@ def generate_random_number_list_10(len_of_elements):
 
 random_list=generate_random_number_list_10(10)
 '''
-
+'''
 def generate_random_number_list_10(len_of_elements):
     
     my_list=[random.randint(1,100) for x in range (len_of_elements)]
@@ -56,13 +56,27 @@ def generate_random_number_list_10(len_of_elements):
  
 
 def generate_list_consist_of_10_smaller_list(amount_of_list):
-    big_list=[generate_random_number_list_10(5) for x in range (amount_of_list)]
-    return print(big_list)
+    big_list=[generate_random_number_list_10(10) for x in range (amount_of_list)]
+    return print(*big_list,sep='\n')
 
-bigger_list=generate_list_consist_of_10_smaller_list(5)
+bigger_list=generate_list_consist_of_10_smaller_list(10)
+'''
 
+def generate_random_number_list_10(len_of_elements):
+    
+    my_list=[random.randint(1,100) for x in range (len_of_elements)]
+    return my_list
+ 
 
+def generate_list_consist_of_10_smaller_list(amount_of_list,len_of_elements,variable):
+    big_list=[generate_random_number_list_10(len_of_elements) for x in range (amount_of_list)]
+    if (variable % 2)==0:
+        print(big_list[1:amount_of_list:2])
+    if (variable % 2)!=0: 
+        print(big_list[0:amount_of_list:2])
+    print(big_list)
 
+generate_list_consist_of_10_smaller_list(10,4,10)
 
 
 
